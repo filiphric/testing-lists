@@ -5,9 +5,6 @@ const todos = require('../fixtures/twoTodos')
 beforeEach( () => {
 
   cy
-    .request('DELETE', '/todos')
-
-  cy
     .request('POST', '/todos/seed', todos)
 
   cy
@@ -15,7 +12,7 @@ beforeEach( () => {
 
 });
 
-it('Checks texts of todos item', () => {
+it('Checks texts of todos items', () => {
 
   cy
     .get('.todo').then( items => {

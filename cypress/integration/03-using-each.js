@@ -6,9 +6,6 @@ const todosTitles = ["buy milk", "wash dishes", "clean windows", "clean up bedro
 beforeEach( () => {
 
   cy
-    .request('DELETE', '/todos')
-
-  cy
     .request('POST', '/todos/seed', todos)
 
   cy

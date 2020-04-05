@@ -5,9 +5,6 @@ const todos = require('../fixtures/threeTodos')
 beforeEach( () => {
 
   cy
-    .request('DELETE', '/todos')
-
-  cy
     .request('POST', '/todos/seed', todos)
 
   cy
